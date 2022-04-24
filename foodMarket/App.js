@@ -1,11 +1,12 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import RootsStack from './src/Roots/Stack';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>COBA</Text>
-    </SafeAreaView>
+    <NavigationContainer>
+      <RootsStack />
+    </NavigationContainer>
   );
 };
 
