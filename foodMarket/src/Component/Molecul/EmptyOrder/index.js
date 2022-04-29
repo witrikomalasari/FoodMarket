@@ -1,8 +1,11 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Button, SimpleComponent} from '../../Component';
+import {Button, SimpleComponent} from '../../Atom';
 
-const EmptyOrder = ({navigation}) => {
+const EmptyOrder = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.page}>
       <SimpleComponent
@@ -14,7 +17,7 @@ const EmptyOrder = ({navigation}) => {
       <View style={styles.buttonContainer}>
         <Button
           label="Find Foods"
-          // onPress={() => navigation.navigate('EmptyOrder')}
+          onPress={() => navigation.replace('TabBottomNavigator')}
         />
       </View>
     </View>

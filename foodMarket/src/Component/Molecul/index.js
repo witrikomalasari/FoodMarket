@@ -6,6 +6,9 @@ import HomeProfile from './HomeProfile';
 import Rating from './Rating';
 import ItemListFood from './ItemListFood';
 import Counter from './Counter';
+import ItemListOrder from './ItemListOrder';
+import EmptyOrder from './EmptyOrder';
+import OrderTopTabSlider from './OrderTopTabSlider';
 
 export {
   Header,
@@ -16,4 +19,7 @@ export {
   Rating,
   ItemListFood,
   Counter,
+  ItemListOrder,
+  EmptyOrder,
+  OrderTopTabSlider,
 };

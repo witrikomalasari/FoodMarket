@@ -27,11 +27,15 @@ const NewTaste = () => {
           image={FoodDummy1}
           name="Soup Bumil"
           price="IDR 289.000"
+          rating={3}
+          type="Product-Home"
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
           image={FoodDummy2}
           name="Chicken"
+          type="Product-Home"
+          rating={2}
           price="IDR 4.509.000"
           onPress={() => navigation.navigate('FoodDetail')}
         />
@@ -39,6 +43,8 @@ const NewTaste = () => {
           image={FoodDummy3}
           name="Shrimp"
           price="IDR 999.000"
+          type="Product-Home"
+          rating
           onPress={() => navigation.navigate('FoodDetail')}
         />
       </View>
@@ -55,11 +61,15 @@ const Popular = () => {
         image={FoodDummy1}
         name="Soup Bumil"
         price="IDR 289.000"
+        type="Product-Home"
+        rating
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
         image={FoodDummy4}
         name="Chicken"
+        type="Product-Home"
+        rating
         price="IDR 4.509.000"
         onPress={() => navigation.navigate('FoodDetail')}
       />
@@ -67,12 +77,16 @@ const Popular = () => {
         image={FoodDummy2}
         name="Shrimp"
         price="IDR 999.000"
+        type="Product-Home"
+        rating
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
         image={FoodDummy3}
         name="Coffee"
         price="IDR 200.000"
+        type="Product-Home"
+        rating
         onPress={() => navigation.navigate('FoodDetail')}
       />
     </View>
@@ -88,29 +102,43 @@ const Recommended = () => {
         image={FoodDummy1}
         name="Soup Bumil"
         price="IDR 289.000 "
+        type="Product-Home"
+        rating
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
         image={FoodDummy3}
         name="Chicken"
+        rating
         price="IDR 4.509.000"
+        type="Product-Home"
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
         image={FoodDummy5}
         name="Shrimp"
         price="IDR 999.000"
+        type="Product-Home"
+        rating
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
         image={FoodDummy2}
         name="Coffee"
         price="IDR 200.000"
+        type="Product-Home"
+        rating
         onPress={() => navigation.navigate('FoodDetail')}
       />
     </View>
   );
 };
+
+const renderScene = SceneMap({
+  1: NewTaste,
+  2: Popular,
+  3: Recommended,
+});
 
 const renderTabBar = props => (
   <TabBar
@@ -134,12 +162,6 @@ const HomeTopTabSlider = () => {
     {key: '3', title: 'Recommended'},
   ]);
 
-  const renderScene = SceneMap({
-    1: NewTaste,
-    2: Popular,
-    3: Recommended,
-  });
-
   return (
     <TabView
       navigationState={{index, routes}}
@@ -157,6 +179,7 @@ export default HomeTopTabSlider;
 const styles = StyleSheet.create({
   container: {
     paddingTop: 8,
+    paddingHorizontal: 24,
   },
   indicator: {
     backgroundColor: '#020202',

@@ -44,7 +44,7 @@ const FoodDetail = ({navigation}) => {
           <View style={styles.containerButton}>
             <Button
               label="Order Now"
-              onPress={() => navigation.navigate('SuccessOrder')}
+              onPress={() => navigation.navigate('OrderSummary')}
             />
           </View>
         </View>

@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Button, Gap, SimpleComponent} from '../../Component';
 
-const SuccessOrder = () => {
+const SuccessOrder = ({navigation}) => {
   return (
     <View style={styles.page}>
       <SimpleComponent
@@ -12,9 +12,19 @@ const SuccessOrder = () => {
         secondSubtitle="preparing your best foods"
       />
       <View style={styles.buttonContainer}>
-        <Button label="Order Other Foods" />
+        <Button
+          label="Order Other Foods"
+          onPress={() => navigation.replace('TabBottomNavigator')}
+        />
         <Gap height={12} />
-        <Button label="View My Order" color="#8D92A3" textColor="#ffffff" />
+        <Button
+          label="View My Order"
+          color="#8D92A3"
+          textColor="#ffffff"
+          onPress={() =>
+            navigation.replace('TabBottomNavigator', {screen: 'Order'})
+          }
+        />
       </View>
     </View>
   );

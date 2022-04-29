@@ -4,11 +4,11 @@ import {IlEmptyOrder, IlSuccessOrder, IlSuccessSignUp} from '../../../Assets';
 import Gap from '../Gap';
 
 const SimpleComponent = ({title, firstSubtitle, secondSubtitle, labelIcon}) => {
-  const Icon = ({labelIc}) => {
-    if (labelIc === 'EmptyOrder') {
+  const Icon = ({labelIcon}) => {
+    if (labelIcon === 'EmptyOrder') {
       return <IlEmptyOrder />;
     }
-    if (labelIc === 'SuccessOrder') {
+    if (labelIcon === 'SuccessOrder') {
       return <IlSuccessOrder />;
     }
     return <IlSuccessSignUp />;

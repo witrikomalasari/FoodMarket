@@ -3,13 +3,13 @@ import React from 'react';
 import {
   Address,
   FoodDetail,
+  OrderSummary,
   SignIn,
   SignUp,
   SplashScreen,
   SuccessOrder,
   SuccessSignUp,
 } from '../../Pages';
-import EmptyOrder from '../../Pages/EmptyOrder';
 import TabBottomNavigator from '../MainTab';
 
 const Stack = createStackNavigator();
@@ -48,11 +48,6 @@ const rootStacks = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="EmptyOrder"
-        component={EmptyOrder}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
         name="FoodDetail"
         component={FoodDetail}
         options={{headerShown: false}}
@@ -60,6 +55,11 @@ const rootStacks = () => {
       <Stack.Screen
         name="SuccessOrder"
         component={SuccessOrder}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="OrderSummary"
+        component={OrderSummary}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
