@@ -3,7 +3,9 @@ import React from 'react';
 import {
   Address,
   FoodDetail,
+  OrderDetail,
   OrderSummary,
+  Profile,
   SignIn,
   SignUp,
   SplashScreen,
@@ -60,6 +62,16 @@ const rootStacks = () => {
       <Stack.Screen
         name="OrderSummary"
         component={OrderSummary}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="OrderDetail"
+        component={OrderDetail}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

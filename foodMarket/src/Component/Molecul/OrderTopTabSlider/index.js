@@ -3,6 +3,7 @@ import {View, useWindowDimensions, StyleSheet, Text} from 'react-native';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {FoodDummy1} from '../../../Assets';
 import ItemListFood from '../ItemListFood';
+import {useNavigation} from '@react-navigation/native';
 
 const InProgress = () => {
   const navigation = useNavigation();
@@ -15,6 +16,7 @@ const InProgress = () => {
         totalItems="3"
         type="Orders-InProgress"
         price="18.000.000"
+        onPress={() => navigation.navigate('OrderDetail')}
       />
       <ItemListFood
         image={FoodDummy1}
@@ -22,6 +24,7 @@ const InProgress = () => {
         totalItems="3"
         type="Orders-InProgress"
         price="18.000.000"
+        onPress={() => navigation.navigate('OrderDetail')}
       />
       <ItemListFood
         image={FoodDummy1}
@@ -29,6 +32,7 @@ const InProgress = () => {
         totalItems="3"
         type="Orders-InProgress"
         price="18.000.000"
+        onPress={() => navigation.navigate('OrderDetail')}
       />
     </View>
   );
@@ -45,6 +49,7 @@ const PostOrders = () => {
         totalItems="3"
         type="Orders-PostOrders"
         price="• IDR 18.000.000"
+        onPress={() => navigation.navigate('OrderDetail')}
       />
       <ItemListFood
         image={FoodDummy1}
@@ -52,6 +57,7 @@ const PostOrders = () => {
         totalItems="3"
         type="Orders-PostOrders"
         price="• IDR 18.000.000"
+        onPress={() => navigation.navigate('OrderDetail')}
       />
       <ItemListFood
         image={FoodDummy1}
@@ -59,6 +65,7 @@ const PostOrders = () => {
         totalItems="3"
         type="Orders-PostOrders"
         price="• IDR 18.000.000"
+        onPress={() => navigation.navigate('OrderDetail')}
       />
     </View>
   );
@@ -69,6 +76,7 @@ const renderScene = SceneMap({
   2: PostOrders,
 });
 
+// librabry TOP TAB SLIDER === react-native-tab-view
 const renderTabBar = props => {
   console.log('ini props rendertabbar', JSON.stringify(props, null, 2));
   return (
@@ -125,7 +133,7 @@ const styles = StyleSheet.create({
   },
   justifyTopBar: {
     width: 'auto',
-    marginHorizontal: 10,
+    marginHorizontal: 14,
   },
   title: focused => ({
     color: focused ? '#020202' : '#8D92A3',

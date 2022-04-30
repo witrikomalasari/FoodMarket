@@ -1,10 +1,23 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {IcNext} from '../../../Assets';
+import {Gap} from '../../Atom';
 
-const ItemListOrder = ({label, value, valueColor = '#020202'}) => {
+const ItemListOrder = ({
+  label,
+  value,
+  valueColor = '#020202',
+  iconButton,
+  onPress,
+}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
+      {/* {iconButton ? (
+        <TouchableOpacity onPress={onPress}>
+          <IcNext />
+        </TouchableOpacity>
+     ) : (*/}
       <Text style={styles.value(valueColor)}>{value}</Text>
     </View>
   );

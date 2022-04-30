@@ -5,10 +5,11 @@ import Address from './Address';
 import SuccessSignUp from './SuccessSignUp';
 import Home from './Home';
 import Order from './Order';
-import Profile from './Profile';
 import FoodDetail from './FoodDetail';
 import SuccessOrder from './SuccessOrder';
 import OrderSummary from './OrderSummary';
+import OrderDetail from './OrderDetail';
+import Profile from './Profile';
 
 export {
   SplashScreen,
@@ -22,4 +23,5 @@ export {
   FoodDetail,
   SuccessOrder,
   OrderSummary,
+  OrderDetail,
 };
