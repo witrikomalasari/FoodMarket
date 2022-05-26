@@ -1,5 +1,5 @@
 # FoodMarket
-Aplikasi Pembelian, Pemesanan serta Pembayaran online menggunakan :
+Aplikasi Pembelian, Pemesanan serta Pembayaran makanan online menggunakan :
 * React Native
 * Integrasi dengan REST API
 * Integrasi ke MIDTRANS PAYMENT GATEWAY
